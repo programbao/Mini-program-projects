@@ -1,0 +1,143 @@
+<view class='box'>
+  <swiper bindchange='swiperChange'>
+
+    
+    <!-- swiper1 -->
+    <swiper-item class='swiper1'>
+      <image mode="aspectFill" class="bgkImg" src="https://pictures-image.oss-cn-beijing.aliyuncs.com/wyzxgzs.png"></image>
+      <view class="shelterView">
+        <view class="experience">
+          <view style="{{opa1}}">
+            <text>欢迎加入</text>
+            <text animation='{{dojump1}}'>网园</text>
+          </view>
+          <view style="{{opa2}}">
+            <text>还记得你经历的</text>
+            <text animation='{{dojump2}}'>点滴</text>吗</view>
+          <view style="{{opa3}}">
+            <text>还记得我们第一次</text>
+            <text animation='{{dojump3}}'>培训</text>的时间吗</view>
+          <view style="{{opa4}}">
+            <text>还记得你的第一次</text>
+            <text animation='{{dojump4}}'>考核</text>吗</view>
+          <view style="{{opa5}}">
+            <text>还记得你第一次</text>
+            <text animation='{{dojump5}}'>组队</text>吗</view>
+          <view style="{{opa6}}">
+            <text>还记得第一次为队友而</text>
+            <text animation='{{dojump6}}'>熬夜</text>吗</view>
+          <view style="{{opa7}}">
+            <text animation='{{dojump7}}'>痛苦</text>、心酸、无奈、无助、放弃</view>
+          <view style="{{opa8}}">
+            <text>但是你的</text>
+            <text animation='{{dojump8}}'>坚持</text>
+          </view>
+          <view style="{{opa9}}">
+            <text>但是你的</text>
+            <text animation='{{dojump9}}'>能力</text>
+          </view>
+          <view style="{{opa10}}">
+            <text>让我们看到了</text>
+            <text animation='{{dojump10}}'>你</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <!-- swiper2 -->
+    <swiper-item class='swiper2'>
+      <view class="swiper-info">
+        <view animation='{{move1}}'>考核期间</view>
+        <view animation='{{move2}}'>经过你辛勤努力</view>
+        <view animation='{{move3}}'>你耕下了</view>
+        <view animation='{{move4}}' class="numCode">
+          {{countCode}}
+        </view>
+        <view animation='{{move5}}'>行代码</view>
+        <view class="swiper-img">
+          <image mode="aspectFill" animation='{{move6}}' src="https://pictures-image.oss-cn-beijing.aliyuncs.com/progrem.jpg"></image>
+        </view>
+      </view>
+      <view class="img">
+        <image mode="scaleToFill" src="{{name === '罗泽豪'?nameImg[0]: name === '陈诚安'? nameImg[1]: name === '孙学涵'? nameImg[2]: nameImg[0]}}"></image>
+      </view>
+      <!-- 遮挡层 -->
+      <view class="shelter"></view>
+    </swiper-item>
+    <!-- swiper3 -->
+    <swiper-item class='swiper3'>
+      <view style='{{experience1}}' class="title">从2019年到2020年</view>
+      <view style="{{left0}}">
+        <text>09-21</text>
+        <text>见面会</text>
+      </view>
+      <view style="{{left1}}">
+        <text>09-28</text>
+        <text>第一次培训</text>
+      </view>
+      <view style="{{left2}}">
+        <text>10-13</text>
+        <text>第二次培训</text>
+      </view>
+      <view style="{{left3}}">
+        <text>10-20</text>
+        <text>第三次培训</text>
+      </view>
+      <view style="{{left4}}">
+        <text>10-27</text>
+        <text>第四次培训</text>
+      </view>
+      <view style="{{left5}}">
+        <text>11-16</text>
+        <text>第五次培训</text>
+      </view>
+      <view  style='{{experience2}}'  class="title">考核</view>
+      <view style="{{left6}}">
+        <text>2019-10-27</text>
+        <text>一轮考核开始</text>
+      </view>
+      <view style="{{left7}}">
+        <text>2019-11-18</text>
+        <text>二轮考核开始</text>
+      </view>
+      <view style="{{left8}}">
+        <text>2020-1-9</text>
+        <text>三轮考核开始</text>
+      </view>
+      <view  style='{{experience3}}'  class="title">最后</view>
+      <view style="{{left9}}">
+        <text>3-7到3-8</text>
+        <text>面试</text>
+      </view>
+      <view  style='{{experience4}}'  class="title">结果</view>
+      <view  style="{{left10}}" class="final">欢迎加入我们</view>
+      <view  style='{{experience5}}'  class="title">历时</view>
+      <view  style="{{left11}}" class="final">{{countTime}}天</view>
+
+    </swiper-item>
+    <!-- swiper4 -->
+    <swiper-item class='{{swiperStyle}}'>
+      <view class="note">一些小安排</view>
+      <block wx:for='{{des}}' wx:key='index'>
+        <view class="plan">
+          <view class="array">{{index + 1}}、</view>
+          <view class="arrange">
+            <view class="txt1">{{item.txt1}}</view>
+            <view class="txt2">{{item.txt2}}</view>
+          </view>
+        </view>
+      </block>
+      <view>没了</view>
+      <view class="welcome">再次欢迎你,{{name}}</view>
+      <view class="logo">
+        <image src="https://pictures-image.oss-cn-beijing.aliyuncs.com/logo.jpg"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <!--重置小圆点的样式  -->
+  <view class="dots">
+    <block wx:for="{{4}}" wx:key="index">
+      <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>

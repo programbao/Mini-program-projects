@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="img">
+   <image src="https://pictures-image.oss-cn-beijing.aliyuncs.com/logo.jpg"></image>
+  </view>
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">欢迎</button>
+  </view>
+</view>
